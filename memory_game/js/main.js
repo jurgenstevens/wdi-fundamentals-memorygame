@@ -1,23 +1,43 @@
 console.log("Up and running!");
 
-console.log("User flipped " + cardOne);
-console.log("User flipped " + cardTwo);
-
-var cards = ["queen", "queen", "king", "king"];
-
+var myArray = [
+{
+rank: "queen",
+suit: "hearts",
+cardImage: "images/queen-of-hearts.png",
+},
+{
+rank: "queen",
+suit: "diamonds",
+cardImage: "images/queen-of-diamonds.png",
+},
+{
+rank: "king",
+suit: "hearts",
+cardImage: "images/king-of-hearts.png",
+},
+{
+rank: "king",
+suit: "diamonds",
+cardImage: "images/king-of-diamonds.png",
+},
+];
 var cardsInPlay = [];
-var cardOne = ["queen"];
-cardsInPlay.push(cardOne);
-console.log("User flipped queen");
 
-var cardTwo = ["queen"];
-cardsInPlay.push(cardTwo);
-console.log("User flipped queen");
-
-if(cardsInPlay.length === 2){ 
-	console.log("you have selected two cards"); 
-	if (cardsInPlay[0] === cardsInPlay[1]) 
-		alert("You found a match!"); 
-	else 
-		alert("Sorry, try again"); 
+var checkForMatch = function() {
+    if (cardsInPlay[0] === cardsInPlay[1]) {
+        alert('You found a match!');
+    } else {
+        alert('Sorry, try again.');
+    }   
 }
+var flipCard = function(cardId) {
+    console.log("User flipped " + cards[cardId]);
+    cardsInPlay.push(cards[0]);
+    if (cardsInPlay.length === 2) {
+        checkForMatch();
+  }
+}
+
+flipCard(0);
+flipCard(2);
