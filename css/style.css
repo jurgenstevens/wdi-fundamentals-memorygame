@@ -66,6 +66,7 @@ main {
 }
 img {
 	margin: 40px 8px;
+	padding: 2px;
 }
 footer {
 	text-transform: uppercase;
