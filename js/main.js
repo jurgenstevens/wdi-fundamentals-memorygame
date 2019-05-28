@@ -1,5 +1,24 @@
-console.log("Up and running!");
+var cards = ["queen", "queen", "king", "king"];
+var cardsInPlay =[];
 
+var checkForMatch = function() {
+    if (cardsInPlay[0] === cardsInPlay[1]) {
+        console.log('You found a match!');
+    } else {
+        console.log('Sorry, try again.');
+    }   
+}
+
+function flipCard(cardId) {
+    console.log("User flipped " + cards[cardId]);
+    cardsInPlay.push(cards[cardId]);
+    checkForMatch();
+}
+
+flipCard(0);
+flipCard(1);
+
+/*
 var myArray = [
 {
 rank: "queen",
@@ -23,6 +42,11 @@ cardImage: "images/king-of-diamonds.png",
 },
 ];
 var cardsInPlay = [];
+var card = [
+    {
+
+    }
+]
 
 var checkForMatch = function() {
     if (cardsInPlay[0] === cardsInPlay[1]) {
@@ -32,6 +56,7 @@ var checkForMatch = function() {
     }   
 }
 var flipCard = function(cardId) {
+    for(var cardId = 0; cardId < myArray.length; cardId++) 
     console.log("User flipped " + cards[cardId]);
     cardsInPlay.push(cards[0]);
     if (cardsInPlay.length === 2) {
@@ -39,5 +64,9 @@ var flipCard = function(cardId) {
   }
 }
 
+var eventHandler = function() {
+    console.log("clicked");
+}
 flipCard(0);
-flipCard(2);
+flipCard(1);
+*/

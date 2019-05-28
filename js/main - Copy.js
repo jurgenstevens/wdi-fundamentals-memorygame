@@ -23,6 +23,11 @@ cardImage: "images/king-of-diamonds.png",
 },
 ];
 var cardsInPlay = [];
+var card = [
+    {
+
+    }
+]
 
 var checkForMatch = function() {
     if (cardsInPlay[0] === cardsInPlay[1]) {
@@ -39,5 +44,11 @@ var flipCard = function(cardId) {
   }
 }
 
+var eventHandler = function() {
+    console.log("clicked");
+}
+
+/*
 flipCard(0);
 flipCard(2);
+*/
